@@ -1,5 +1,5 @@
 {
-  "name": "preload_cache.js",
+  "name": "preload_cache",
   "version": "1.0.0",
   "description": "PreloadCache",
   "main": "preload_cache.js",
