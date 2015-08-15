@@ -1,0 +1,23 @@
+{
+  "name": "preload_cache.js",
+  "version": "1.0.0",
+  "description": "PreloadCache",
+  "main": "preload_cache.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gdi2290/preload_cache.js.git"
+  },
+  "author": "gdi2290 <github@gdi2290.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/gdi2290/preload_cache.js/issues"
+  },
+  "homepage": "https://github.com/gdi2290/preload_cache.js#readme",
+  "devDependencies": {
+    "typescript": "^1.5.3"
+  }
+}

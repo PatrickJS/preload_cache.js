@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": true
+  },
+  "files": [
+    "node_modules/typescript/bin/lib.core.es6.d.ts",
+    "preload_cache.ts"
+  ]
+}
