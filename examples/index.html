@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PreloadCache</title>
+  </head>
+  <body>
+    <script>
+    window.exports = {};
+    </script>
+    <script src="/preload_cache.js"></script>
+    <script>
+      window.preloadCache = new exports.PreloadCache();
+      window.preloadCache.createRefs('request1', 'request2', 'request3');
+    </script>
+
+    <app id="app">
+      Loading...
+      <script>
+      function bootstrap() {
+        window.preloadCache.getRef('request1').then(function(value) {
+          console.log('request1');
+          return value;
+        });
+        window.preloadCache.getRef('request2').then(function(value) {
+          console.log('request2');
+          return value;
+        });
+        window.preloadCache.getRef('request3').then(function(value) {
+          console.log('request3');
+          return value;
+        });
+        var $app = document.getElementById('app');
+        $app.innerHTML = 'Bootstrapped App';
+      }
+      </script>
+
+    </app>
+
+    <script>
+      bootstrap();
+    </script>
+
+    <script>window.preloadCache.complete('request1', {res: 'response1'});</script>
+    <script>window.preloadCache.complete('request2', {res: 'response2'});</script>
+    <script>window.preloadCache.complete('request3', {res: 'response3'});</script>
+  </body>
+</html>
